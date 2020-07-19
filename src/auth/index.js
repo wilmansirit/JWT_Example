@@ -19,18 +19,18 @@ module.exports = (option) => {
 
     const isAuth = (req, res, next) => {
 
-        const bearedToken = req.headers.authorization;
+        const bearerToken = req.headers.authorization;
 
         try {
             // If there is no token then....
-            if (bearedToken === undefined) throw ({ name: 'JsonWebTokenError', message: 'No token' });
+            if (bearerToken === undefined) throw ({ name: 'JsonWebTokenError', message: 'No token' });
 
             // Decode the token
-            const token = bearedToken.split(" ")[1];
+            const bearer = bearerToken.split(" ")[1];
             // Verify the token 
-            const verifiedToken = jwt.verify(token, option.secret);
+            const decoded = jwt.verify(bearer, option.secret);
             // Return credentials 
-            req.token = verifiedToken
+            req.token = decoded
             return next();
 
         } catch (err) {
