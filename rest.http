@@ -1,0 +1,10 @@
+
+# Send a request typing Ctrl + Alt + r
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "username": "wsirit",
+    "password": "1234567890"
+}
+
