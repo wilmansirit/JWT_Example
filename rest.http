@@ -1,16 +1,16 @@
 
 # Send a request typing Ctrl + Alt + r
-# POST http://localhost:3000/api/login
-# content-type: application/json
+POST http://localhost:3000/api/login
+content-type: application/json
 
-# {
-#     "username": "wsirit",
-#     "password": "1234567890"
-# }
+{
+    "username": "wsirit",
+    "password": "1234567890"
+}
 
 
 
-GET http://localhost:3000/api/
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ3c2lyaXQiLCJpYXQiOjE1OTUyMDExMTAsImV4cCI6MTU5NTIwNDcxMH0.B2SoSxYIbfF0l6vtJtkWSQ29nMIuRrhmFd4fl4aKm68
+# GET http://localhost:3000/api/
+# Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ3c2lyaXQiLCJpYXQiOjE1OTUyMDExMTAsImV4cCI6MTU5NTIwNDcxMH0.B2SoSxYIbfF0l6vtJtkWSQ29nMIuRrhmFd4fl4aKm68
 

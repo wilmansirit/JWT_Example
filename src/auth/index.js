@@ -24,13 +24,13 @@ module.exports = (option) => {
         try {
             // If there is no token then....
             if (bearerToken === undefined) throw ({ name: 'JsonWebTokenError', message: 'No token' });
-
             // Decode the token
-            const bearer = bearerToken.split(" ")[1];
+            const token = bearerToken.split(" ")[1];
             // Verify the token 
-            const decoded = jwt.verify(bearer, option.secret);
+            const decoded = jwt.verify(token, option.secret);
             // Return credentials 
             req.token = decoded
+            // Next middleware
             return next();
 
         } catch (err) {
