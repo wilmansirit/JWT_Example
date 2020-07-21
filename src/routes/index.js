@@ -9,7 +9,7 @@ const createError = require('http-errors')
 router.get("/", (req, res, next) => {
 
     // If not JSON is received
-    if (!req.is('application/json')) return next(createError(400, "Expect an application/json"));
+    if (!req.is('application/json')) return next(createError(400, "Invalid Header Error"));
 
     const user = req.token
     res.send(user);
@@ -27,7 +27,7 @@ router.get("/login", (req, res, next) => {
 router.post("/login", (req, res, next) => {
 
     // If not JSON is received
-    if (!req.is('application/json')) return next(createError(400, "Expect an application/json"));
+    if (!req.is('application/json')) return next(createError(400, "Invalid Header Error"));
 
     // request username an password from user
     const { username } = req.body
